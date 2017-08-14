@@ -1,0 +1,5 @@
+lib jsoncpp 1.8.0 {
+  cmake {
+    JSONCPP_WITH_CMAKE_PACKAGE "ON"
+  }
+}
