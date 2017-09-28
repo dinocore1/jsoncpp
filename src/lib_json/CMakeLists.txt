@@ -98,6 +98,9 @@ IF(BUILD_STATIC_LIBS)
     SET_TARGET_PROPERTIES( jsoncpp_lib_static PROPERTIES OUTPUT_NAME jsoncpp
                            DEBUG_OUTPUT_NAME jsoncpp${DEBUG_LIBNAME_SUFFIX} )
 
+    set_target_properties(jsoncpp_lib_static
+     PROPERTIES POSITION_INDEPENDENT_CODE ON
+    )
     INSTALL( TARGETS jsoncpp_lib_static ${INSTALL_EXPORT}
              RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
              LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
